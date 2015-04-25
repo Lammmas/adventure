@@ -1,0 +1,48 @@
+ID,Name,Price,Roll,Range,Ranged,Slots,Quest
+1,Throwing Axe,8,1d6,3,1,1,0
+2,Throwing Dagger,2,1d4,3,1,1,0
+3,Throwing Hammer,1,1d6,6,1,1,0
+4,Dart,0.5,1d4,6,1,1,0
+5,Sling,0,1d4,15,1,1,0
+6,Light Crossbow,35,1d8,24,1,2,0
+7,Heavy Crossbow,50,1d10,16,1,2,0
+8,Hand Crossbow,100,1d4,9,1,2,0
+9,Javelin,1,1d6,9,1,2,0
+10,Longbow,75,1d8,30,1,2,0
+11,Net,20,1d1,3,1,2,0
+12,Shortbow,30,1d6,18,1,2,0
+13,Handaxe,6,1d4,0,0,1,0
+14,Light Mace,5,1d6,0,0,1,0
+15,Light Pick,4,1d4,0,0,1,0
+16,Sap,1,1d6,0,0,1,0
+17,Sickle,6,1d6,0,0,1,0
+18,Short Sword,10,1d6,0,0,1,0
+19,Battleaxe,10,1d8,0,0,1,0
+20,Club,0,1d6,3,0,1,0
+21,Flail,8,1d8,0,0,1,0
+22,Longsword,15,1d8,0,0,1,0
+23,Heavy Mace,12,1d8,0,0,1,0
+24,Morningstar,8,1d8,0,0,1,0
+25,Heavy Pick,8,1d6,0,0,1,0
+26,Rapier,20,1d6,0,0,1,0
+27,Scimitar,15,1d6,0,0,1,0
+28,Shortspear,1,1d6,6,0,1,0
+29,Basterd Sword,35,1d10,0,0,1,0
+30,Trident,15,1d8,3,0,1,0
+31,Dwarven Waraxe,30,1d10,0,0,1,0
+32,Warhammer,12,1d8,0,0,1,0
+33,Whip,1,1d3,0,0,1,0
+34,Spiked Chain,25,2d4,0,0,2,0
+35,Falchion,75,1d6,0,0,2,0
+36,Heavy Flail,15,1d8,0,0,2,0
+37,Glaive,8,1d8,0,0,2,0
+38,Greataxe,20,1d10,0,0,2,0
+39,Greatclub,5,1d8,0,0,2,0
+40,Greatsword,50,2d6,0,0,2,0
+41,Guisarme,9,2d4,0,0,2,0
+42,Halberd,10,1d10,0,0,2,0
+43,Lance,10,1d8,0,0,2,0
+44,Longspear,5,1d8,0,0,2,0
+45,Quarterstaff,0,1d6,0,0,2,0
+46,Scythe,18,2d4,0,0,2,0
+47,Spear,2,1d8,6,0,2,0

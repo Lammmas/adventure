@@ -1,0 +1,19 @@
+Name,Price,Bonus,Slots,Class,Quest
+Padded Armour,2,1,0,1,0
+Leather Armour,10,2,0,1,0
+Hide Armour,15,3,0,1,0
+Studded Leather Armour,25,3,0,2,0
+Scale Mail Armour,50,4,0,2,0
+Chain Shirt Armour,100,4,0,2,0
+Chainmail Armour,150,5,0,2,0
+Breastplate Armour,200,5,0,3,0
+Splint Mail Armour,200,6,0,3,0
+Banded Mail Armour,250,6,0,3,0
+Half-plate Armour,600,7,0,3,0
+Full Plate Armour,1,500,8,0,3,0
+Buckler,15,1,1,2,0
+Light Wooden Shield,3,1,1,3,0
+Light Steel Shield,9,1,1,3,0
+Heavy Wooden Shield,7,2,1,3,0
+Heavy Steel Shield,20,2,1,3,0
+Tower Shield,30,4,1,3,0

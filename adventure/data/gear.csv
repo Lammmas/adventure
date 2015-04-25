@@ -1,0 +1,92 @@
+Name,Value,Description,Quest,Container,Capacity
+Acid (flask),10,,0,0,0
+Antitoxin (vial),50,,0,0,0
+Artisan's Tools,5,,0,0,0
+Artisan’s Outfit,1,,0,0,0
+Average Lock,40,,0,0,0
+Backpack,2,,0,1,25
+Barrel,2,,0,1,20
+Basket,0.4,,0,1,5
+Bedroll,0.1,,0,0,0
+Bell,1,,0,0,0
+Belt Pouch,1,,0,1,5
+Block and Tackle,5,,0,0,0
+Bucket,0.5,,0,1,5
+Bullseye Lantern,12,,0,0,0
+Caltrops,1,,0,0,0
+Candle,0.01,,0,0,0
+Canvas (sq. m),0.1,,0,0,0
+Case for Map or Scroll,1,,0,1,1
+Chain (10 ft.),30,,0,0,0
+Chalk (1 pc.),0.01,,0,0,0
+Chest,2,,0,1,25
+Clay Mug,0.02,,0,0,0
+Clay Pitcher,0.02,,0,0,0
+Clay Tankard,0.03,,0,0,0
+Cleric’s Vestments,5,,0,0,0
+Cold Weather Outfit,8,,0,0,0
+Common Lamp,0.1,,0,0,0
+Courtier’s Outfit,30,,0,0,0
+Craftsman's Tools,5,,0,0,0
+Crowbar,2,,0,0,0
+Disguise Kit,50,,0,0,0
+Entertainer’s Outfit,3,,0,0,0
+Explorer’s Outfit,10,,0,0,0
+Firewood (per day),0.01,,0,0,0
+Fishhook,0.1,,0,0,0
+Fishing net (20 sq. m),4,,0,0,0
+Flask,0.03,,0,2,1,1,1
+Flint and Steel,1,,0,0,0
+Glass Wine Bottle,2,,0,1,1
+Good Lock,80,,0,0,0,0,0
+Grappling Hook,1,,0,0,0
+Hammer,0.5,,0,0,0
+Healer's Kit,50,,0,0,0
+Hempen Rope (15 m),1,,0,0,0
+Holy Water (flask),25,,0,0,0
+Hooded Lantern,7,,0,0,0
+Hourglass,25,,0,0,0
+Ink (30 ml Vial),8,,0,2,1,0,0
+Inkpen,0.1,,0,0,0
+Iron Pot,0.5,,0,0,0
+Ladder (3m),0.5,,0,0,0
+Magnifying Glass,100,,0,0,0
+Manacles,15,,0,0,0
+Miner's Pick,3,,0,0,0
+Monk’s Outfit,5,,0,0,0
+Musical Instrument,5,,0,0,0
+Noble’s Outfit,75,,0,0,0
+Oil (0.5 l flask),0.1,,0,0,0
+Paper (sheet),0.4,,0,0,0
+Parchment (sheet),0.1,,0,0,0
+Peasant’s Outfit,0.1,,0,0,0
+Piton,0.1,,0,0,0
+Pole (3 m),0.2,,0,0,0
+Portable Ram,10,,0,0,0
+Potion Vial,1,,0,2,1,1,1
+Royal Outfit,200,,0,0,0
+Sack,0.1,,0,1,15
+Scholar’s Outfit,5,,0,0,0
+Sealing Wax,1,,0,0,0
+Sewing Needle,0.5,,0,0,0
+Shovel,2,,0,0,0
+Signal Whistle,0.8,,0,0,0
+Signet Ring,5,,0,0,0
+Silk Rope (15m),10,,0,0,0
+Silver Holy Symbol,25,,0,0,0
+Simple Lock,20,,0,0,0
+Sledge,1,,0,0,0
+Small Steel Mirror,10,,0,0,0
+Soap (per 0.5 kg),0.5,,0,0,0
+Spell Component Pouch,5,,0,1,5
+Spyglass,1000,,0,0,0
+Tent,10,,0,0,0
+Thieves' Tools,30,,0,0,0
+Torch,0.01,,0,0,0
+Trail Rations (per day),0.5,,0,0,0
+Traveller’s Outfit,1,,0,0,0
+Waterskin,1,,0,0,0
+Whetstone,0.02,,0,0,0
+Winter Blanket,0.5,,0,0,0
+Wizard's Spellbook (blank),15,,0,0,0
+Wooden Holy Symbol,1,,0,0,0

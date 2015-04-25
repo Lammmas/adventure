@@ -1,0 +1,65 @@
+Theme	Action/Adventure
+This is the most common and straightforward sort of adventure there is. In the Action/Adventure scenario, you present your characters with a task and then confront them with obstacles to overcome in order to accomplish the task successfully.
+
+Goal	Explore a New Area
+The heroes are hired or convinced to enter an unmapped area and explore it. They may be making a map; they may be trying to find someone who disappeared into this area in the past; they may be following legends that tell of treasure in the unexplored interior.
+
+Story Hook	Missing Memories
+One or more of the PCs wakes up with no memory of the recent past, and now they find themselves in some kind of trouble they don't understand. The PCs must find the reason for the memory lapse, and solve any problems they uncover in the meantime.
+
+Plot	Geographic Progression
+This is the simplest sort of adventure plot. The heroes have an area to investigate or travel through; they have encounters based on where they are. For instance, the traditional dungeon, where monsters are tied to specific rooms or areas. Or, if the heroes are travelling along a narrow valley or through an enchanted forest, they might suffer ambushes and other encounters fixed to various points along their travel plan. The plot, then, is getting to the villain by surviving the intervening obstacle encounters.
+
+Climax	Chase to Ground
+First, you have the Heroes Chasing the Villain. The villain, after a series of encounters with the heroes, is running to safety, to some place where he can acquire more power, or to somehwere he can accomplish some dread purpose such as assassination or mass murder. The heroes chase him, have to deal with the obstacles he leaves behind, and finally catch up to him before or just as he reaches his goal. Here, we have the final duel between the villains forces and the heroes. Second, you have the Villain Chasing the Heroes. Often, in a story like this, the heroes have found out how to defeat the villain -- such as getting to a particular temple and conducting a particular ritual. The villain chases them all through their quest, catching up to them just as they're commenciing their ritual; they must, with heroic effort, conclude the ritual while suffering his attacks. Third, you have the Master Villain's Sudden Escape Attempt. This takes place in adventures where the Master Villain's identity is unknown until the end. His identity is revealed and he makes a sudden bolt for freedom; the heroes give chase. This usually results in a dangerous foot-chase through nasty terrain -- such as across rooftops, through the dungeons, or across an active battlefield.
+
+General Setting	Torturous Terrain
+The adventure takes place in some sort of unsettled, uncivilized, dangerous terrain; in action stories, the desert and jungle work best; choose one of those two or decide on a setting that is similarly dangerous and exotic.
+
+Specific Setting I	Tavern/Inn
+This is a classic fantasy setting, the residence of travelling heroes and the home of the tavern brawl.
+
+Specific Setting II	Madman's Fortress
+This is the citadel of a major enemy: Strong, unassailable, filled with soldiers and monsters, lined with secret passages and deathtraps; not a wholesome place for adventurers to spend their time.
+
+Master Villain	Ravager
+This Master Villain is like the Destroyer, except that he terrorizes a very limited area -- such as a village, island, castle, or clan stronghold. (He may want to destroy the whole world but be trapped where he is; perhaps his efforts to free himself constitute the adventure's plot.) He stays in his area and terrorizes whatever comes into it.
+
+Minor Villain I	Moronic Muscleman
+This fellow is a huge, powerful monster of a fighter. His job is to smash anything the villain tells him to smash. He does that very well, but don't ask him to do any thinking; he has no time for such brainy stuff.
+
+Minor Villain II	Corrupted Hero
+This villain was once a hero, possibly one known to the players. He was seduced by the dark side of the dungeon master. Because of his own weakness, or of a curse, he has become a villain, a pawn of the Master Villain.
+
+Ally/Neutral	Grumpy Old Professional
+Again, the heroes need an expert in a certain field -- this time a craft or art, such as blacksmithing, engineering, horse-training, or whatever. The only or best professional they can find is an aged expert. He's grumpy, cranky, and sharp-tongued; he constantly complains about the food, the weather, his companions, the decline in skill of his co-workers since he was a young man, the road conditions, the rotten pay he's receiving, and so on.
+
+Monster Encounter	Reconaissance Monster
+At some point in the adventure, the Master Villain will become aware of the heroes' activities against him. If he has magical abilities or a magical servant, he will send some sort of quiet, clever monster to spy on the heroes. The heroes should have an opportunity to realize they're being spied upon, leading them to a mad scrable as they try to capture or destroy the spy.
+
+Character Encounter	Thief
+At some point in their adventure, the heroes have a run-in with thieves.
+
+Deathtrap	Tomb Deathtraps
+Another classic type of trap is the sort of triggered trap left behind in abandoned tombs, ruins, and catacombs. Here, a hero who touches the wrong step, floor tile, wall brick, torch bracket, mounted gemstone, or other device will trigger some sort of ancient trap designed to kill tomb-robbers and intruders.
+
+Chase	Footrace
+The chase involves the characters on foot, probably through such terrain as city streets or the corridors of a palace. One hero may realize that the's being pursued by a party of enemies and choose to run for it; the heroes may have caught up to the Master Villain, prompting him to run for his life.
+
+Omen/Prophesy	Innocent Fulfills Prophecy
+An innocent could fulfill a prophecy -- one which endangers his/her life. This innocent might, for instance, be the one who is supposed to slay the king, but is not a mighty adventurer able to protect himself from the king; the heroes may find themselves sheltering and helping this poor dupe.
+
+Secret Weakness	Holy Symbol
+The villain may have the traditional weakness to a specific holy symbol -- but don't choose just an ordinary one. It may be a holly symbol no longer used by the church, or may be some forgotten variation of the current symbol. (For instance, the cross may not work, but a variation -- such as the Roman cross -- might; alternatively, it might have to be a holy symbol which has undergone some 
+
+Special Condition	No Lawbreaking
+For some reason, at one point in the story, the heroes cannot allow themselves to break the law -- even when it would help them greatly to do so. For instance, the heroes may be asking for the help of a king whose word is law and whose power is immense. When they arrive for their audience, an emissary of the Master Villain is making a similar plea for help. If the heroes attack and kill that emissary, they will lose any chance at the king's help -- in fact, he may order their execution.
+
+Moral Quandry	Saving Quandry
+Finally, another classic quandry puts the heroes in the position of choosing between a grand opportunity to hurt the Master Villain -- or saving the lives of a number of individuals.
+
+Red Herring	False Path to the Artifact
+Once again, if the heroes have had too easy a time finding the artifact capable of destroying the villain, give them trouble this way: When they get to the place where the artifact is supposed to be contained, they find the coffer or chamber or whatever empty, obviously looted by robbers, who have scrawled such remarks as "Kelrog was here!" upon the walls.
+
+Cruel Trick	Wanted by the Law
+One final complication, one which occurs pretty frequently, is when the heroes are wanted by the law. When they're wanted by the law, they have to travel in secret and very limited in the resources they can acquire.
