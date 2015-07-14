@@ -1,0 +1,737 @@
+FORMAT: 1A
+HOST: http://test.hashcoins.com/api/
+
+# HF API
+
+Simple API for communicating with HashFlare. 
+You can replace the .json extension with .xml to get same data formatted as XML.
+If no extension is added then json is assumed.
+
+NOTE: If you apply some filters, and in the filter you want to do a wildcard search, ex. emails from Gmail, you write `email=%gmail%`.
+
+However, if you want to have some numbers therel ex. filtering timestamps, then due to URL-ing, you'd need to replace the first % with `%25` which returns the % sign.
+
+And so, to search for all timestamps in 2015, you'd have to write `%252015%`.
+
+## Authentication
+
+Authentication is via either an authentication Cookie, most easily obtained by signing in to the site, 
+or via an API token that is available in the Settings on the site after signing in.
+
+The Token shouls be passed either as a parameter `?token=[token]` 
+or with a header `X-Token: Basic [token]`
+
+# Group Public
+
+## API Root [/]
+
+This resource does not have any attributes. Instead it offers the initial
+API affordances in the form of the links in the JSON body.
+
+## Retrieve the Entry Point [GET]
+
++ Response 200 (application/json)
+
+        {
+            "result":
+            {
+                "status": "success",
+                "data": null
+            }
+        }
+
+## Validate campaign code [/code/{code}.json]
+
+Simple campaign/coupon code validation function
+
++ Parameters
+    + code (required, string, `123ABC`) ... The code to be verified in form of a string
+
+## Retrieve Info [GET]
+
++ Response 200 (application/json)
+
+        {
+            "result":
+            {
+                "status": "success",
+                "data": 
+                {
+                    'valid': true,
+                    'type': 'discount',
+                    'amount': '50',
+                    'unit': '%',
+                }
+            }
+        }
+
++ Response 200 (application/json)
+
+        {
+            "result":
+            {
+                "status": "error",
+                "data": "Invalid code"
+            }
+        }
+
+# Group User access
+
+These endpoints are available to all authenticated users
+
+## Profile [/me.json]
+
+Via this path you'll be able to get information about your profile
+
+## Retrieve Info [GET]
+
++ Response 200 (application/json)
+
+        {
+            "result":
+            {
+                "status": "success",
+                "data": 
+                {
+                    {
+                        'email': 'Admin@example.com',
+                        'first_name': 'Admin',
+                        'last_name': 'Nistrator',
+                        'hold': false,
+                        'wallet': '1AMe23GnHuA8m4r8qQJW24GciE67jCkaYi',
+                        'language': 'eng',
+                        'contact':
+                        {
+                            'company_name': '',
+                            'vat': '',
+                            'address1': 'Street 1',
+                            'address2': 'Section C',
+                            'city': 'Tallinn',
+                            'region': 'Harjumaa',
+                            'country': 'Estonia',
+                            'post_code': '104165'
+                        },
+                        'hashrates': 
+                        {
+                            'SHA-256':
+                            {
+                                'hashrate': 50,
+                                'unit': 'GH/s',
+                                'profitability': 0.356873,
+                                'pools': 
+                                {
+                                    'GHash.io': 75,
+                                    'Eligius': 25
+                                }
+                            }
+                        }
+                    }
+
+# Group Admin access
+
+These endpoints are only available for users with administrator access
+
+## User [/users/{user_id}.json]
+
++ Parameters
+    + user_id (required, number, `2`) ... ID of the User in form of an integer
+
+### Get a single user [GET /users/{user_id}.json]
+
+Allows you to view the details of a single user
+
++ Response 200
+
+    + Headers
+
+            Location: /users/2
+
+    + Body
+    
+            {
+            "result":
+            {
+                "status": "success",
+                "data": 
+                {
+                        'id': '2',
+                        'email': 'User@example.com',
+                        'first_name': 'User',
+                        'last_name': 'Name',
+                        'created': '0000-00-00 00:00:00',
+                        'modified': '2015-05-01 11:56:12',
+                        'confirmed': '2015-03-17 14:02:32',
+                        'hold': '2015-04-10 11:01:50',
+                        'wallet': '1AMe23GnHuA8m4r8qQJW24GciE67jCkaYi',
+                        'active': true,
+                        'deactivated': null,
+                        'token': 'token',
+                        'coefficient': '0.0',
+                        'language': 'eng',
+                        'tries': '0',
+                        'adv_pools': true,
+                        'contact':
+                        {
+                            'id': '2',
+                            'user_id': '2',
+                            'company_name': '',
+                            'vat': '',
+                            'address1': 'Street 2',
+                            'address2': 'Section B',
+                            'city': 'Tallinn',
+                            'region': 'Harjumaa',
+                            'country_id': '67',
+                            'post_code': '104165'
+                        }
+                    }
+                }
+            }
+
+### Edit User [POST /users/{user_id}.json]
+
+This action allows you to change that user
+
++ Response 201
+
+    + Headers
+
+            Location: /users/2
+
+    + Body
+    
+            {
+                "result":
+                {
+                    "status": "success",
+                    "data": 
+                    {
+                        'id': '2',
+                        'email': 'User@example.com',
+                        'first_name': 'User',
+                        'last_name': 'Name',
+                        'created': '2015-05-01 11:56:12',
+                        'modified': '2015-05-01 11:56:12',
+                        'confirmed': '2015-03-17 14:02:32',
+                        'hold': '2015-04-10 11:01:50',
+                        'wallet': '1AMe23GnHuA8m4r8qQJW24GciE67jCkaYi',
+                        'active': true,
+                        'deactivated': null,
+                        'token': 'token',
+                        'coefficient': '1.0',
+                        'language': 'eng',
+                        'tries': '0',
+                        'adv_pools': true,
+                        'contact':
+                        {
+                            'id': '2',
+                            'user_id': '2',
+                            'company_name': '',
+                            'vat': '',
+                            'address1': 'Street 2',
+                            'address2': 'Section B',
+                            'city': 'Tallinn',
+                            'region': 'Harjumaa',
+                            'country_id': '67',
+                            'post_code': '104165'
+                        }
+                    }
+                }
+            }
+            
+### Create a New User [PUT /users/]
+
+You may create your own user using this action. It takes a JSON
+object containing the user's information.
+
++ Request (application/json)
+
+            {
+                "user": [
+                    'email': 'New@example.com',
+                    'language': 'eng',
+                    'password': '123ABC',
+                    'country': 'Estonia',
+                ]
+            }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /users/3
+
+    + Body
+    
+            {
+            "result":
+            {
+                "status": "success",
+                "data": 
+                {
+                    'id': '3',
+                    'email': 'New@example.com',
+                    'first_name': '',
+                    'last_name': '',
+                    'created': '2015-03-17 14:02:32',
+                    'modified': '2015-03-17 14:02:32',
+                    'confirmed': '',
+                    'hold': '',
+                    'wallet': '',
+                    'active': true,
+                    'deactivated': null,
+                    'token': 'token',
+                    'coefficient': '1.0',
+                    'language': 'eng',
+                    'tries': '0',
+                    'adv_pools': true,
+                    'contact':
+                    {
+                        'id': '3',
+                        'user_id': '3',
+                        'company_name': '',
+                        'vat': '',
+                        'address1': '',
+                        'address2': '',
+                        'city': '',
+                        'region': '',
+                        'country_id': '67',
+                        'post_code': ''
+                    }
+                    }
+                }
+            }
+
+## Users Collection [/users.json{?page,length,mode,order,field}]
+
+A Users' list has the following attributes:
++ page (number, optional) Pagination page number in form of an integer, defaults to `0`
++ length (number,  optional) Pagination page length in form of an integer, defaults to `10`
++ mode (string, optional) Search mode in form of a string, can be AND or OR, defaults to `and`
++ order (string, optional) Results ordering by ID, can be ASC or DESC, defaults to `asc`
++ field (string, optional) Searchable field name with value, can be entered multiple times, ex. `?first_name=hello&last_name=world`
+
++ Parameters
+    + page (number, `0`, optional) ... Pagination page number in form of an integer
+    + length (number, `10`, optional) ... Pagination page length in form of an integer
+    + mode (string, `and`, optional) ... Search mode in form of a string, can be AND or OR
+    + order (string, `asc`, optional) ... Results ordering by ID, can be ASC or DESC
+    + field (string, `value`, optional) ... Searchable field name with value, can be entered multiple times
+
+### View all Users [GET]
+
++ Response 200 (application/json)
+
+        {
+            "result":
+            {
+                "status": "success",
+                "data": 
+                {
+                    {
+                        'id': '1',
+                        'email': 'Admin@example.com',
+                        'first_name': 'Admin',
+                        'last_name': 'Nistrator',
+                        'created': '0000-00-00 00:00:00',
+                        'modified': '2015-05-01 11:56:12',
+                        'confirmed': '2015-03-17 14:02:32',
+                        'hold': '2015-04-10 11:01:50',
+                        'wallet': '1AMe23GnHuA8m4r8qQJW24GciE67jCkaYi',
+                        'active': true,
+                        'deactivated': null,
+                        'token': 'token',
+                        'coefficient': '0.0',
+                        'language': 'eng',
+                        'tries': '0',
+                        'adv_pools': true,
+                        'contact':
+                        {
+                            'id': '1',
+                            'user_id': '1',
+                            'company_name': '',
+                            'vat': '',
+                            'address1': 'Street 1',
+                            'address2': 'Section C',
+                            'city': 'Tallinn',
+                            'region': 'Harjumaa',
+                            'country_id': '67',
+                            'post_code': '104165'
+                        }
+                    },
+                    {
+                        'id': '2',
+                        'email': 'User@example.com',
+                        'first_name': 'User',
+                        'last_name': 'Name',
+                        'created': '0000-00-00 00:00:00',
+                        'modified': '2015-05-01 11:56:12',
+                        'confirmed': '2015-03-17 14:02:32',
+                        'hold': '2015-04-10 11:01:50',
+                        'wallet': '1AMe23GnHuA8m4r8qQJW24GciE67jCkaYi',
+                        'active': true,
+                        'deactivated': null,
+                        'token': 'token',
+                        'coefficient': '0.0',
+                        'language': 'eng',
+                        'tries': '0',
+                        'adv_pools': true,
+                        'contact':
+                        {
+                            'id': '2',
+                            'user_id': '2',
+                            'company_name': '',
+                            'vat': '',
+                            'address1': 'Street 2',
+                            'address2': 'Section B',
+                            'city': 'Tallinn',
+                            'region': 'Harjumaa',
+                            'country_id': '67',
+                            'post_code': '104165'
+                        }
+                    }
+                }
+            }
+        }
+
+## Logs Collection [/logs/{type}.json{?page,length,mode,order,field}]
+
+A Log entries' list has the following attributes:
+
++ Parameters
+    + type (string, `user`, required) ... Log type, can be `user`, `purchase`, `campaign`, `transfer`
+    + page (number, `0`, optional) ... Pagination page number in form of an integer
+    + length (number, `10`, optional) ... Pagination page length in form of an integer
+    + mode (string, `and`, optional) ... Search mode in form of a string, can be AND or OR
+    + order (string, `asc`, optional) ... Results ordering by ID, can be ASC or DESC
+    + field (string, `value`, optional) ... Searchable field name with value, can be entered multiple times
+
+### View all User Logs [GET /logs/user.json]
+
++ Response 200 (application/json)
+
+        {
+            "result":
+            {
+                "status": "success",
+                "data": 
+                {
+                    {
+                        'id': 1,
+                        'user_id': 1,
+                        'type': 'Updated profile',
+                        'scrypt_rate': '24',
+                        'scryptn_rate': '0',
+                        'sha_rate': '1680',
+                        'maintenance': '0',
+                        'payout': '0',
+                        'time': '2015-05-04 12:41:37',
+                        'BTC_balance': '29642997994',
+                        'LTC_balance': '0'
+                    },
+                    {
+                        'id': 2,
+                        'user_id': 1,
+                        'type': 'Created purchase 2',
+                        'scrypt_rate': '24',
+                        'scryptn_rate': '0',
+                        'sha_rate': '1680',
+                        'maintenance': '0',
+                        'payout': '0',
+                        'time': '2015-05-04 12:41:37',
+                        'BTC_balance': '29642997994',
+                        'LTC_balance': '0'
+                    }
+                }
+            }
+        }
+
+### View all Purchase Logs [GET /logs/purchase.json]
+
++ Response 200 (application/json)
+
+        {
+            "result":
+            {
+                "status": "success",
+                "data": 
+                {
+                    {
+                        'id': '1',
+                        'amount': '270',
+                        'total': '160.6500',
+                        'currency': 'USD',
+                        'method': 'wire',
+                        'status': '1',
+                        'parent_id': null,
+                        'created': '2015-04-27 13:42:24',
+                        'updated': '2015-04-27 13:42:41'
+                        'user_id': 1,
+                        'product':
+                        {
+                            'name': 'SHA-256',
+                            'type': 'sha',
+                            'price': '0.5950'
+                        },
+                    },
+                    {
+                        'id': '2',
+                        'amount': '50',
+                        'total': '17.8512',
+                        'currency': 'USD',
+                        'method': 'cc',
+                        'status': '2',
+                        'parent_id': null,
+                        'created': '2015-05-04 12:41:37',
+                        'updated': '2015-05-04 12:46:18'
+                        'user_id': 1,
+                        'product':
+                        {
+                            'name': 'Scrypt-N',
+                            'type': 'scryptn',
+                            'price': '0.4490'
+                        },
+                    }
+                }
+            }
+        }
+
+### View all Campaign Logs [GET /logs/campaign.json]
+
++ Response 200 (application/json)
+
+        {
+            "result":
+            {
+                "status": "success",
+                "data": 
+                {
+                    {
+                        'id': '1',
+                        'campaign_id': '1',
+                        'user_id': '2',
+                        'activated': true,
+                        'source': null,
+                        'earnings': '2172830657',
+                        'created': '2015-01-29 00:00:00',
+                        'changed': '2015-04-21 14:26:32'
+                    },
+                    {
+                        'id': '2',
+                        'campaign_id': '2',
+                        'user_id': '1',
+                        'activated': true,
+                        'source': null,
+                        'earnings': '2172830657',
+                        'created': '2015-01-29 00:00:00',
+                        'changed': '2015-04-21 14:26:32'
+                    },
+                }
+            }
+        }
+
+### View all Transfer Logs [GET /logs/transfer.json]
+
++ Response 200 (application/json)
+
+        {
+            "result":
+            {
+                "status": "success",
+                "data": 
+                {
+                    {
+                        'id': '1',
+                        'amount': '9999900.00',
+                        'currency': 'BTC',
+                        'time': '2015-03-02 16:19:20',
+                        'status': '1',
+                        'withdrawal': true,
+                        'user_id': '1',
+                        'authorizer_id': null,
+                        'BTC_commission': '100',
+                        'LTC_commission': '0',
+                    },
+                    {
+                        'id': '2',
+                        'amount': '84584.00',
+                        'currency': 'BTC',
+                        'time': '2015-04-17 07:12:44',
+                        'status': '4',
+                        'withdrawal': true,
+                        'user_id': '2',
+                        'authorizer_id': '1',
+                        'BTC_commission': '100',
+                        'LTC_commission': '0',
+                    },
+                }
+            }
+        }
+
+## Other Collections [/{type}.json{?page,length,mode,order,field}]
+
++ Parameters
+    + type (string, `campaigns`, required) ... The type, can be `campaigns`, `pools`, `rules`, `products`
+    + page (number, `0`, optional) ... Pagination page number in form of an integer
+    + length (number, `10`, optional) ... Pagination page length in form of an integer
+    + mode (string, `and`, optional) ... Search mode in form of a string, can be AND or OR
+    + order (string, `asc`, optional) ... Results ordering by ID, can be ASC or DESC
+    + field (string, `value`, optional) ... Searchable field name with value, can be entered multiple times
+
+### View all Campaigns [GET /campaigns.json]
++ Response 200 (application/json)
+
+        {
+            "result":
+            {
+                "status": "success",
+                "data": 
+                {
+                    {
+                        'id': '1',
+                        'name': 'Referral code',
+                        'code': '123ABC',
+                        'type_id': '1',
+                        'value': '5',
+                        'min_amount': '0',
+                        'owner_id': '1',
+                        'created': '2015-01-29 00:00:00',
+                        'active': false,
+                        'single_use': false,
+                        'type': 'Referral',
+                        'unit': '%',
+                        'multiplier': '0.01000000',
+                    },
+                    {
+                        'id': '1',
+                        'name': 'Referral code',
+                        'code': '258FOO',
+                        'type_id': '1',
+                        'value': '5',
+                        'min_amount': '0',
+                        'owner_id': '2',
+                        'created': '2015-02-14 00:00:00',
+                        'active': false,
+                        'single_use': false,
+                        'type': 'Referral',
+                        'unit': '%',
+                        'multiplier': '0.01000000',
+                    }
+                }
+            }
+        }
+
+### View all Pools [GET /pools.json]
++ Response 200 (application/json)
+
+        {
+            "result":
+            {
+                "status": "success",
+                "data": 
+                {
+                    {
+                        'id': '1',
+                        'name': 'BTC Guild',
+                        'abbr': 'BG',
+                        'amount': '1192492',
+                        'type': 'sha',
+                        'color': 'af1542',
+                        'time': '2015-01-21 00:00:00',
+                        'active': true
+                    },
+                    {
+                        'id': '2',
+                        'name': 'Block.io',
+                        'abbr': 'BL',
+                        'amount': '1192492',
+                        'type': 'sha',
+                        'color': '071254',
+                        'time': '2015-01-21 00:00:00',
+                        'active': true
+                    },
+                }
+            }
+        }
+
+### View all Rules [GET /rules.json]
++ Response 200 (application/json)
+
+        {
+            "result":
+            {
+                "status": "success",
+                "data": 
+                {
+                    {
+                        'id': '1',
+                        'sha_payout': '234867',
+                        'scrypt_payout': '4257',
+                        'scryptn_payout': '15342',
+                        'sha_maintenance': '0.9',
+                        'scrypt_maintenance': '1.45',
+                        'scryptn_maintenance': '0.77',
+                        'BTC_withdraw_min': '100000000',
+                        'LTC_withdraw_min': '5000000',
+                        'BTC_withdraw_max': '1000000000',
+                        'LTC_withdraw_max': '100000000',
+                        'BTC_withdraw_commission': '100',
+                        'LTC_withdraw_commission': '250',
+                        'payout_rand_min': '-10',
+                        'payout_rand_max': '5',
+                        'maintenance_mode': false
+                    },
+                    {
+                        'id': '2',
+                        'sha_payout': '3475',
+                        'scrypt_payout': '2345',
+                        'scryptn_payout': '675',
+                        'sha_maintenance': '1.2',
+                        'scrypt_maintenance': '1.3',
+                        'scryptn_maintenance': '0.28',
+                        'BTC_withdraw_min': '100000000',
+                        'LTC_withdraw_min': '5000000',
+                        'BTC_withdraw_max': '1000000000',
+                        'LTC_withdraw_max': '100000000',
+                        'BTC_withdraw_commission': '150',
+                        'LTC_withdraw_commission': '30',
+                        'payout_rand_min': '-10',
+                        'payout_rand_max': '5',
+                        'maintenance_mode': false
+                    },
+                }
+            }
+        }
+
+### View all Products [GET /products.json]
++ Response 200 (application/json)
+
+        {
+            "result":
+            {
+                "status": "success",
+                "data": 
+                {
+                    {
+                        'id': '1',
+                        'name': 'SHA-256',
+                        'type': 'sha',
+                        'price': '0.5950',
+                        'currency': 'USD'
+                    },
+                    {
+                        'id': '1',
+                        'name': 'Scrypt',
+                        'type': 'scrypt',
+                        'price': '0.4490',
+                        'currency': 'USD'
+                    },
+                    {
+                        'id': '2',
+                        'name': 'Scrypt-N',
+                        'type': 'scryptn',
+                        'price': '0.4860',
+                        'currency': 'USD'
+                    },
+                }
+            }
+        }
